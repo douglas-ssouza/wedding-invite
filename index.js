@@ -3,9 +3,10 @@ function openGoogleMapsDirections() {
 
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-  if (isMobile) {
+  if (!isMobile) {
     const deviceProtocol = /iPhone|iPad|iPod/i.test(navigator.userAgent)
       ? "maps://?daddr=" : "geo:?daddr=";
+    alert(deviceProtocol);
     const mapsMobileUrl = deviceProtocol + encodeURIComponent(destinationCoords);
     window.open(mapsMobileUrl);
   } else {
