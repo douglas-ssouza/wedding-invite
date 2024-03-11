@@ -1,23 +1,15 @@
 function openGoogleMapsDirections() {
   const destinationCoords = "-23.336816787719727,-46.22216796875";
 
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const isMobile = /Android/i.test(navigator.userAgent);
 
   if (isMobile) {
-    const deviceProtocol = /iPhone|iPad|iPod/i.test(navigator.userAgent)
-      ? "maps://?daddr=" : "geo:?daddr=";
-    alert(deviceProtocol);
-    const mapsMobileUrl = deviceProtocol + encodeURIComponent(destinationCoords);
-    alert(mapsMobileUrl);
-
-    const paragraph = document.createElement('p');
-    paragraph.innerHTML = `device: ${deviceProtocol} - string: ${mapsMobileUrl}`;
-    const body = document.getElementById('body');
-    body.appendChild(paragraph);
-    
-    // window.open(mapsMobileUrl);
+    const mapsMobileUrl = /iPhone|iPad|iPod/i.test(navigator.userAgent)
+      ? "https://maps.google.com/maps?ll=-23.336552,-46.222638&z=16&t=m&hl=pt-BR&gl=US&mapclient=apiv3&cid=17848247453708602673"
+      : "geo:?daddr=" + encodeURIComponent(destinationCoords);
+    window.open(mapsMobileUrl);
   } else {
-    if ("geolocation" in navigator) {
+    if (!"geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(function(position) {
         const userCoords = position.coords.latitude + "," + position.coords.longitude;
         const mapsDesktopUrl = "https://www.google.com/maps/dir/?api=1&origin=" + encodeURIComponent(userCoords) + "&destination=" + encodeURIComponent(destinationCoords);
