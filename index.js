@@ -8,6 +8,13 @@ function openGoogleMapsDirections() {
       ? "maps://?daddr=" : "geo:?daddr=";
     alert(deviceProtocol);
     const mapsMobileUrl = deviceProtocol + encodeURIComponent(destinationCoords);
+    alert(mapsMobileUrl);
+
+    const paragraph = document.createElement('p');
+    paragraph.innerHTML = `device: ${deviceProtocol} - string: ${mapsMobileUrl}`;
+    const body = document.getElementById('body');
+    body.appendChild(paragraph);
+    
     // window.open(mapsMobileUrl);
   } else {
     if ("geolocation" in navigator) {
