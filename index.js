@@ -8,15 +8,16 @@ function openGoogleMapsDirections() {
     window.open(mapsMobileUrl);
   } else {
     if ("geolocation" in navigator) {
-      if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-        window.open("https://maps.google.com/maps?ll=-23.336552,-46.222638&z=16&t=m&hl=pt-BR&gl=US&mapclient=apiv3&cid=17848247453708602673", "_blank");
-      } else {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          const userCoords = position.coords.latitude + "," + position.coords.longitude;
-          const mapsDesktopUrl = "https://www.google.com/maps/dir/?api=1&origin=" + encodeURIComponent(userCoords) + "&destination=" + encodeURIComponent(destinationCoords);
-          window.open(mapsDesktopUrl, "_blank");
-        });
-      }
+      window.open("https://maps.google.com/maps?ll=-23.336552,-46.222638&z=16&t=m&hl=pt-BR&gl=US&mapclient=apiv3&cid=17848247453708602673");
+      // if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      //   window.open("https://maps.google.com/maps?ll=-23.336552,-46.222638&z=16&t=m&hl=pt-BR&gl=US&mapclient=apiv3&cid=17848247453708602673");
+      // } else {
+      //   navigator.geolocation.getCurrentPosition(function(position) {
+      //     const userCoords = position.coords.latitude + "," + position.coords.longitude;
+      //     const mapsDesktopUrl = "https://www.google.com/maps/dir/?api=1&origin=" + encodeURIComponent(userCoords) + "&destination=" + encodeURIComponent(destinationCoords);
+      //     window.open(mapsDesktopUrl, "_blank");
+      //   });
+      // }
     } else {
       alert("Geolocation is not supported by your browser.");
     }
