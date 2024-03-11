@@ -8,7 +8,7 @@ function openGoogleMapsDirections() {
       ? "maps://?daddr=" : "geo:?daddr=";
     alert(deviceProtocol);
     const mapsMobileUrl = deviceProtocol + encodeURIComponent(destinationCoords);
-    window.open(mapsMobileUrl);
+    // window.open(mapsMobileUrl);
   } else {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(function(position) {
