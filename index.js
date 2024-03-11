@@ -2,7 +2,7 @@ const destinationLat = -23.336816787719727;
 const destinationLng = -46.22216796875;
 
 function openGoogleMapsDirections() {
-  const destinationCoords = `${destinationLat},${destinationLng}`;
+  const destinationCoords = "-23.336816787719727,-46.22216796875";
 
   const isMobile = /Android/i.test(navigator.userAgent);
 
