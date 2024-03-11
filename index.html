@@ -26,13 +26,17 @@
           ></gmp-advanced-marker>
         </gmp-map>
 
-        <button id="showRouteBtn" type="button" class="my-4 border border-black bg-gradient-to-tr from-rose-500 to-orange-500 text-slate-100 py-2 px-6 rounded-lg hover:shadow-lg hover:text-white hover:bg-gradient-to-tr hover:from-rose-600 hover:to-orange-600">
-          Como chegar
-        </button>
-
-        <button id="wazeBtn" type="button" class="my-4 border border-black bg-gradient-to-tr from-rose-500 to-orange-500 text-slate-100 py-2 px-6 rounded-lg hover:shadow-lg hover:text-white hover:bg-gradient-to-tr hover:from-rose-600 hover:to-orange-600">
-          Como Chegar waze
-        </button>
+        <div class="flex items-center flex-col mt-4">
+          <button id="mapsBtn" type="button" class="my-4 text-4xl font-bold border border-black text-slate-100 py-4 px-8 rounded-lg bg-green-500 hover:shadow-lg hover:text-white">
+            <img class="inline mr-6 h-12" src="/public/google-maps.png" alt="Google Maps icon">
+            Como chegar - Google Maps
+          </button>
+  
+          <button id="wazeBtn" type="button" class="my-4 text-4xl font-bold border border-black text-slate-100 py-4 px-8 rounded-lg bg-green-500 hover:shadow-lg hover:text-white">
+            <img class="inline mr-6 h-12" src="/public/waze.png" alt="Waze app icon">
+            Como chegar - Waze
+          </button>
+        </div>
       </div>
     </div>
 

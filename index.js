@@ -21,5 +21,5 @@ function openWazeRoute() {
   window.open(wazeUrl, '_blank');
 }
 
-document.getElementById("showRouteBtn").addEventListener("click", openGoogleMapsDirections);
+document.getElementById("mapsBtn").addEventListener("click", openGoogleMapsDirections);
 document.getElementById("wazeBtn").addEventListener("click", openWazeRoute);
