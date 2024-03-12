@@ -12,18 +12,20 @@
         <img class="rounded-lg overflow-hidden" src="/public/invite.png" alt="Wedding invitation">
       </div>
 
-      <div class="h-96 w-full max-w-5xl my-4">
-        <gmp-map
-          center="-23.336816787719727,-46.22216796875"
-          zoom="14"
-          map-id="DEMO_MAP_ID"
-          id="map"
-        >
-          <gmp-advanced-marker
-            position="-23.336816787719727,-46.22216796875"
-            title="My wedding location"
-          ></gmp-advanced-marker>
-        </gmp-map>
+      <div class="my-4 w-full">
+        <div class="h-96 w-full max-w-5xl m-auto" id="mapContainer" class="cursor-pointer">
+          <gmp-map
+            center="-23.336816787719727,-46.22216796875"
+            zoom="14"
+            map-id="DEMO_MAP_ID"
+            id="map"
+          >
+            <gmp-advanced-marker
+              position="-23.336816787719727,-46.22216796875"
+              title="My wedding location"
+            ></gmp-advanced-marker>
+          </gmp-map>
+        </div>
   
         <button id="wazeBtn" type="button" class="block my-12 m-auto text-4xl font-bold border border-black text-slate-100 py-6 px-20 rounded-lg bg-gradient-to-tl from-blue-400 to-blue-600 hover:shadow-lg hover:text-white hover:from-blue-600 hover:to-blue-700">
           <img class="inline mr-4 h-12" src="/public/waze.png" alt="Waze app icon">
